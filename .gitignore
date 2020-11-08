@@ -10,3 +10,5 @@
 /.idea/ZBCN-SERVER.iml
 /zbcn-gateway/zuul-gateway/mvnw
 /zbcn-gateway/zuul-gateway/mvnw.cmd
+/.idea/
+/.idea/
