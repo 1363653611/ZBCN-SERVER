@@ -1,0 +1,26 @@
+eureka:
+  instance:
+    # hostname: demo.server # 主机名称
+    instance-id: zuul.server # eureka 服务列表显示名称
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+# 构建路由地址
+zuul:
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
+  routes:
+    # 这里可以自定义
+    zbcn-demo:
+      # 匹配的路由规则
+      path: /api-demo-url/**
+      # 路由的目标地址
+      # url: http://localhost:9000/
+      sericeId: demo-server # 路由的目标服务名
+# 解决错误：com.netflix.client.ClientException: Load balancer does not have available server for client: zbcn-demo
+# 开启eureka负载均衡策略
+ribbon:
+  eureka:
+    enabled: true
