@@ -1,6 +1,10 @@
-spring:
-  application:
-    name: spring-cloud-producer
-  profiles:
-    active: dev
-  server.port=9000
+eureka:
+  instance:
+    # hostname: demo.server # 主机名称
+    instance-id: demo.server # eureka 服务列表显示名称
+  client:
+    service-url:
+      defaultZone: http://zbcn:123456@localhost:8004/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+

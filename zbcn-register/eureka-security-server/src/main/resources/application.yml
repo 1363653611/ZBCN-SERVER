@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-security-server
+  profiles:
+    active: dev
+
+  security:
+    user:
+      name: zbcn
+      password: 123456
+
+
