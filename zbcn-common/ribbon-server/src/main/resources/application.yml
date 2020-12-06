@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ribbon-server
+  profiles:
+    active: dev
+server:
+  port: 8301
+
+# ribbon 配置
+service-url:
+  user-service: http://user-service
+
