@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zbcn</groupId>
-    <artifactId>security</artifactId>
+    <artifactId>eureka-security-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>eureka-security-server</name>
     <description>eureka 登录认证</description>

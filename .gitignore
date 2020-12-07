@@ -11,4 +11,10 @@
 /zbcn-gateway/zuul-gateway/mvnw
 /zbcn-gateway/zuul-gateway/mvnw.cmd
 /.idea/
-/.idea/
+/zbcn-business/zbcn-business.iml
+/zbcn-common/zbcn-common.iml
+/zbcn-txmanager/zbcn-txmanager.iml
+/zbcn-config/zbcn-config.iml
+/zbcn-gateway/zbcn-gateway.iml
+/zbcn-apm/zbcn-apm.iml
+/zbcn-author/zbcn-author.iml
