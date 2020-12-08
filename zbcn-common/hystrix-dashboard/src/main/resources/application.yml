@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: hystix-dashboard
+  profiles:
+    active: dev
+server:
+  port: 8501
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "localhost"

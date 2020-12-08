@@ -1,10 +1,16 @@
 spring:
   application:
-    name: hystix-server
+    name: hystrix-server
   profiles:
     active: dev
 server:
   port: 8401
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'hystrix.stream' #暴露hystrix监控端点
 
 # ribbon 配置
 service-url:
