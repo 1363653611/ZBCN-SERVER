@@ -26,7 +26,10 @@ public class UserService {
         User user = new User();
         user.setId(1L);
         user.setUserName("张珊");
-        return Lists.newArrayList(user);
+        User user2 = new User();
+        user2.setId(2L);
+        user2.setUserName("赵好");
+        return Lists.newArrayList(user,user2);
     }
 
     public User getByUsername(String username) {

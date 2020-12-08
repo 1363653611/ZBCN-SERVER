@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: hystix-server
+  profiles:
+    active: dev
+server:
+  port: 8401
+
+# ribbon 配置
+service-url:
+  user-service: http://user-service
+
