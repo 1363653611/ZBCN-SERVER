@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: feign-server
+  profiles:
+    active: dev
+server:
+  port: 8701
+
+feign:
+  hystrix:
+    enabled: true #在Feign中开启Hystrix
+logging:
+  level:
+    com.zbcn.feignserver.api.UserService: debug
