@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: turbine-server
+  profiles:
+    active: dev
+server:
+  port: 8601
+
+turbine:
+  app-config: hystrix-server #指定需要收集信息的服务名称
+  cluster-name-expression: new String('default') #指定服务所属集群
+  combine-host-port: true #以主机名和端口号来区分服务
