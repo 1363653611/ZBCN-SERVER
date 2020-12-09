@@ -1,0 +1,10 @@
+eureka:
+  instance:
+    # hostname: demo.server # 主机名称
+    instance-id: config.server # eureka 服务列表显示名称
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
