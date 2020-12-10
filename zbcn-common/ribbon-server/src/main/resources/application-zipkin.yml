@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ribbon-server
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 0.1 #设置Sleuth的抽样收集概率
+server:
+  port: 8301
+
+# ribbon 配置
+service-url:
+  user-service: http://user-service
+
+eureka:
+  instance:
+    # hostname: demo.server # 主机名称
+    instance-id: ribbon.server # eureka 服务列表显示名称
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
