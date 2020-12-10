@@ -8,8 +8,8 @@ spring:
       server:
         git: #配置存储配置信息的Git仓库
           uri: https://github.com/1363653611/config-repo.git
-          username: 1363653611
-          password: 810@likun
+          username: xxxx
+          password: xxxxxx
           clone-on-start: true #开启启动时直接从git获取配置
           search-paths: '{application}'
 server:
