@@ -1,16 +1,22 @@
 server:
-  port: 9103
+  port: 9105
 spring:
   application:
     name: config-client
   cloud:
-    config: #Config客户端配置
-      profile: dev #启用配置后缀名称
+    config:
+      profile: dev #启用环境名称
       label: dev #分支名称
-      uri: http://localhost:8905 #配置中心地址
       name: config #配置文件名称
-      username: zbcn
-      password: 123456
+      discovery:
+        enabled: true
+        service-id: config-server
+  rabbitmq: #rabbitmq相关配置
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
 eureka:
   client:
     service-url:

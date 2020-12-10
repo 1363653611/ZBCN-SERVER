@@ -1,0 +1,33 @@
+server:
+  port: 8904
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/1363653611/config-repo.git
+          username: 1363653611
+          password: 810@likun
+          clone-on-start: true # 开启启动时直接从git获取配置
+          search-paths: '{application}'
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+    # 必须加，否则 其他客户端无法访问改 实例：No instances found of configserver (config-server)
+    register-with-eureka: true
+    fetch-registry: true
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
