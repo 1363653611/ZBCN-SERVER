@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: consul-user-service
+  profiles:
+    active: dev
+  cloud:
+    consul: #Consul服务注册发现配置
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        prefer-ip-address: true #这个必须配
+        tags: version=1.0
+        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}
+        healthCheckInterval: 15s
+        health-check-url: http://${spring.cloud.client.ip-address}:${server.port}/actuator/health
+
+server:
+  port: 8206
