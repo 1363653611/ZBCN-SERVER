@@ -1,0 +1,8 @@
+server:
+  port: 9301
+spring:
+  application:
+    name: admin-server
+  profiles:
+    active: dev
+

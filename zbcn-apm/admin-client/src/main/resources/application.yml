@@ -1,0 +1,24 @@
+server:
+  port: 9305
+spring:
+  application:
+    name: admin-client
+  profiles:
+    active: dev
+  boot:
+    admin:
+      client:
+        url: http://localhost:9301 #配置admin-server地址
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  file:
+    name: admin-client.log #添加开启admin的日志监控
