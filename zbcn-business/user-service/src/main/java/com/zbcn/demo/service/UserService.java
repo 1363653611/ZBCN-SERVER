@@ -16,6 +16,9 @@ public class UserService {
     }
 
     public User getUser(Long id) {
+        if(id != 1L){
+            throw new IllegalArgumentException("非法的参数：" + id);
+        }
         User user = new User();
         user.setId(1L);
         user.setUserName("张珊");

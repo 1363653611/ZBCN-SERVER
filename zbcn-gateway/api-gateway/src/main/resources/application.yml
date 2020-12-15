@@ -1,0 +1,25 @@
+server:
+  port: 9201
+service-url:
+  user-service: http://localhost:9001
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: path_route #路由的ID
+          uri: ${service-url.user-service}/user/{id} #匹配后路由地址
+          order: 1 # 路由执行顺序（也可理解成过滤器的执行顺序），执行顺序是从小到大执行，较高的值被解释为较低的优先级。
+          predicates: # 断言，路径相匹配的进行路由
+            - Path=/user/{id}
+        - id: hystrix_route
+          uri: ${service-url.user-service}/**
+          order: 0
+          predicates:
+            - Method=GET
+          filters:
+            - name: Hystrix
+              args:
+                name: fallbackcmd
+                fallbackUri: forward:/fallback
+  profiles:
+    active: dev
