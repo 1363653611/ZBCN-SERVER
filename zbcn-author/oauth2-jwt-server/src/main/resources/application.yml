@@ -9,7 +9,7 @@ spring:
 
 custom:
   oauth2:
-    token_type: redis  # jwt 表示使用 jwt 令牌方式， redis 表示使用redis 方式
+    token_type: jwt  # jwt 表示使用 jwt 令牌方式， redis 表示使用redis 方式
 #logging:
 #  level:
 #    root: debug
