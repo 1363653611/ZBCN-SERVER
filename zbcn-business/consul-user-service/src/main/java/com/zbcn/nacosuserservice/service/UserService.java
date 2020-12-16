@@ -1,8 +1,8 @@
-package com.zbcn.consuluserservice.service;
+package com.zbcn.nacosuserservice.service;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
-import com.zbcn.consuluserservice.vo.User;
+import com.zbcn.nacosuserservice.vo.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

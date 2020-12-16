@@ -1,10 +1,10 @@
-package com.zbcn.consuluserservice;
+package com.zbcn.nacosconfigclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConsulUserServiceApplicationTests {
+class NacosConfigClientApplicationTests {
 
     @Test
     void contextLoads() {

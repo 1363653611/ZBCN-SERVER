@@ -1,4 +1,4 @@
-package com.zbcn.consuluserservice.vo;
+package com.zbcn.nacosuserservice.vo;
 
 import lombok.Data;
 

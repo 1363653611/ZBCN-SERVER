@@ -1,0 +1,25 @@
+server:
+  port: 8401
+
+nacos-server-addr: localhost:8848 #配置Nacos地址
+
+spring:
+  application:
+    name: nacos-ribbon-server
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos-server-addr}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+# ribbon 配置
+service-url:
+  consul-user-service: http://nacos-user-service
+

@@ -1,8 +1,8 @@
-package com.zbcn.consuluserservice.controller;
+package com.zbcn.nacosuserservice.controller;
 
 import com.zbcn.common.response.ResponseResult;
-import com.zbcn.consuluserservice.service.UserService;
-import com.zbcn.consuluserservice.vo.User;
+import com.zbcn.nacosuserservice.service.UserService;
+import com.zbcn.nacosuserservice.vo.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
