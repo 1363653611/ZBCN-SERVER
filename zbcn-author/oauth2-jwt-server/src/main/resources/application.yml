@@ -1,0 +1,16 @@
+server:
+  port: 9401
+spring:
+  application:
+    name: oauth2-security-server
+  redis:  #redis相关配置
+    host: localhost
+    port: 6379
+
+custom:
+  oauth2:
+    token_type: redis  # jwt 表示使用 jwt 令牌方式， redis 表示使用redis 方式
+#logging:
+#  level:
+#    root: debug
+
