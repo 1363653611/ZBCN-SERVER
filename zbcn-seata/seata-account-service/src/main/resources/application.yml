@@ -1,0 +1,52 @@
+server:
+  port: 8401
+spring:
+  application:
+    name: seata-account-service
+  datasource: # 数据源配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seat-account?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    password: 123456
+    username: root
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #配置Nacos地址
+        group: BUSINESS-GROUP
+
+# 分布式事物
+seata:
+  enabled: true
+  application-id: seata-account-service
+  tx-service-group: fsp_tx_group
+  enable-auto-data-source-proxy: true
+  config:
+    type: nacos
+    nacos:
+      namespace:
+      serverAddr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      username: "nacos"
+      password: "nacos"
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 127.0.0.1:8848
+      group: SEATA_GROUP
+      namespace:
+      username: "nacos"
+      password: "nacos"
+
+
+logging:
+  level:
+    io:
+      seata: debug
+  #root: debug
+feign:
+  hystrix:
+    enabled: false
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
