@@ -1,0 +1,28 @@
+server:
+  port: 9401
+spring:
+  application:
+    name: micro-oauth2-auth
+  profiles:
+    active: dev
+  redis:  #redis相关配置
+    host: localhost
+    port: 6379
+    database: 1
+  cloud:
+    nacos:
+      discovery:
+        group: micro
+        server-addr: http://localhost:8848/
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org.springframework.security: debug

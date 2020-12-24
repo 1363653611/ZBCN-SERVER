@@ -1,0 +1,21 @@
+server:
+  port: 9501
+spring:
+  application:
+    name: micro-oauth2-api
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        group: micro
+        server-addr: http://localhost:8848/
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
